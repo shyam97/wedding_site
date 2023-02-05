@@ -16,9 +16,6 @@ body, html {height: 100%;
 }
 
 .button {
-  background-color: #834257; /* Green */
-  border: none;
-  color: #f3cdcb;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -183,6 +180,15 @@ z-index: 999999;
   height: 15vw; 
   bottom: 0%; 
   /* border-style: solid; */
+  }
+
+  .button {
+    position: fixed;
+    top: 80vh;
+    left: 10vw;
+    float:left;
+    margin:auto;
+  }
 }
 
 #names {
