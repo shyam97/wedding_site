@@ -11,12 +11,13 @@ $(window).scroll(function(){
     
       $("#announce").css("height",stopPoint+"vmin")
       $("#announce").css("bottom","25%")
-      $("#announce").css("bottom","25%")
+      $("#invited").css("height",stopPoint+"vmin")
+      $("#invited").css("bottom","25%")
     }
 
     else {
 
-      $("#announce").css("height","8vmin","bottom","10%")
+      $("#invited").css("height","8vmin","bottom","10%")
     }
 
     // ----------------------------------------------------------------
@@ -129,9 +130,45 @@ $(window).scroll(function(){
           }
         } 
       }
+
+      if (curScroll > 3) {
+        $("#names").css("opacity",0);
+      }
     // ------------------------------------------------------------
 
+    if (curScroll > 2.9 && curScroll < 4.1) {
+      var start = 3;
+      var end = 4;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
 
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#invited").css("opacity",opacgetting1);
+          }
+          else {
+            $("#invited").css("opacity",1)
+          }
+        }
+        else {
+          $("#invited").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#invited").css("opacity",opacgetting2);
+          }
+          else {
+            $("#invited").css("opacity",1)
+          }
+        }
+        else {
+          $("#invited").css("opacity",0)
+        }
+      } 
+    }
 
 
   }
