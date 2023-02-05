@@ -21,9 +21,9 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------------
 
-    if (curScroll < 1.4) {
-      var start = 0.3;
-      var end = 1.3;
+    if (curScroll < 1.1) {
+      var start = 0.1;
+      var end = 1;
       var opacgetting2 = (end - curScroll)*4;
 
         if (opacgetting2 > 0) {
@@ -45,9 +45,9 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------------
 
-    if (curScroll > 1.2 && curScroll < 2.4) {
-      var start = 1.3;
-      var end = 2.3;
+    if (curScroll > 0.9 && curScroll < 2.1) {
+      var start = 1;
+      var end = 2;
       var opacgetting1 = (curScroll - start)*4;
       var opacgetting2 = (end - curScroll)*4;
 
@@ -93,9 +93,9 @@ $(window).scroll(function(){
 
     // ------------------------------------------------------------
 
-    if (curScroll > 2.2 && curScroll < 3.4)  {
-        var start = 2.3;
-        var end = 3.3;
+    if (curScroll > 1.9 && curScroll < 3.1)  {
+        var start = 2;
+        var end = 3;
         var opacgetting1 = (curScroll - start)*4;
         var opacgetting2 = (end - curScroll)*4;
 
