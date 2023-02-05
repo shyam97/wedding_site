@@ -11,14 +11,14 @@ body, html {height: 100%;
 }
 
 .button {
-  padding: 10px 20px;
+  padding: 10vh 20vw;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   font-family: Poppins, Open Sans;
   font-weight: 600;
-  margin: 14px 12px;
+  margin: 14vh 12vw;
   cursor: pointer;
   border-radius: 8px;
   background-color: #f3cdcb; 
@@ -81,14 +81,14 @@ z-index: 999999;
 
 .heading1 {
   font-family: Poppins, Open Sans;
-  font-size: 150%;
+  font-size: 100%;
   font-weight: 600;
   margin: auto;
 }
 
 .heading2 {
   font-family: Poppins, Open Sans;
-  font-size: 120%; 
+  font-size: 90%; 
   font-weight: 600; 
   vertical-align: top;
   margin: auto;
@@ -143,6 +143,7 @@ z-index: 999999;
   top: 50vh;
   left: 52.5vw;
   z-index: 1000000;
+  opacity: 0;
 }
 
 #path_mobile {
@@ -172,30 +173,49 @@ z-index: 999999;
   opacity: 0;
 }
 
+#cartoon {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 100%;
+  opacity: 0;
+  color:#834257;
+  text-align: center;
+}
+
 @media screen and (orientation:portrait) {
 
   #scroll {
   position: fixed;
-  top:80vh;
-  left: 0;
-  right: 0;
+  top:85vh;
+  left: auto;
+  right: 10vw;
   z-index: 10;
   margin: auto;
   font-family: Poppins, Open Sans;
   font-size: 100%; 
-  font-weight: 100; 
+  font-weight: 600; 
   text-align: center;
   line-height: 100%;
   color:#834257;
-  width: 15vw; 
+  width: 20vw; 
   height: 15vw; 
   bottom: 0%; 
   /* border-style: solid; */
   }
 
+  #cartoon {
+    position: fixed;
+    width: 30vw;
+    top:72.5vh;
+    margin:auto;
+    left:15vw;
+  }
+
   .button {
     position: fixed;
-    top: 80vh;
+    padding: 3vh 5vw;
+    line-height: 0;
+    top: 87.5vh;
     left: 10vw;
     bottom: 0%;
     float:left;
@@ -219,10 +239,12 @@ z-index: 999999;
     width: 90vw; 
     height: 90vw; 
     top:15%;
+    opacity: 1;
   }
 
   #arrow {
     width: 90vw;
+    left:5%;
     margin:auto;
   }
 
@@ -232,6 +254,21 @@ z-index: 999999;
     height: 15vw; 
     top: 40vh;
     bottom: 20vh; 
+  }
+
+  #path_web {
+    opacity: 0;
+  }
+  
+  #path_mobile {
+    opacity: 0;
+    position: fixed;
+    top: 67.5vh;
+    left: 50vw;
+    right:auto;
+    margin:auto;
+
+    
   }
 
 }

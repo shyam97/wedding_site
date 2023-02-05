@@ -51,26 +51,38 @@ $(window).scroll(function(){
         if (opacgetting1 > 0) {
           if (opacgetting1 < 1) {
             $("#arrow").css("opacity",opacgetting1);
+            $("#cartoon").css("opacity",opacgetting1);
+            $("#path_mobile").css("opacity",opacgetting1);
           }
           else {
             $("#arrow").css("opacity",1)
+            $("#cartoon").css("opacity",1);
+            $("#path_mobile").css("opacity",1);
           }
         }
         else {
           $("#arrow").css("opacity",0);
+          $("#cartoon").css("opacity",0);
+          $("#path_mobile").css("opacity",0);
         }
       }
       else {
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
             $("#arrow").css("opacity",opacgetting2);
+            $("#cartoon").css("opacity",opacgetting2);
+            $("#path_mobile").css("opacity",opacgetting2);
           }
           else {
             $("#arrow").css("opacity",1)
+            $("#cartoon").css("opacity",1);
+            $("#path_mobile").css("opacity",1);
           }
         }
         else {
           $("#arrow").css("opacity",0)
+          $("#cartoon").css("opacity",0);
+          $("#path_mobile").css("opacity",0);
         }
       } 
     }
