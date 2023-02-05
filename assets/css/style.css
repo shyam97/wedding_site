@@ -17,6 +17,7 @@ body, html {height: 100%;
   display: inline-block;
   font-size: 16px;
   font-family: Poppins, Open Sans;
+  font-weight: 600;
   margin: 14px 12px;
   cursor: pointer;
   border-radius: 8px;
@@ -63,13 +64,12 @@ z-index: 999999;
   color:#834257;
   vertical-align: middle;
   display: table; 
-  /* border-style: solid; */
 }
 
 #wreath {
   width: 90vmin; 
   height: 90vmin; 
-  position: absolute;
+  position: fixed;
   top:5%;
   left: 0;
   right: 0;
@@ -89,7 +89,7 @@ z-index: 999999;
 .heading2 {
   font-family: Poppins, Open Sans;
   font-size: 90%; 
-  font-weight: 100; 
+  font-weight: 600; 
   vertical-align: top;
   margin: auto;
 }
@@ -109,7 +109,7 @@ z-index: 999999;
   z-index: 1000;
   font-family: Poppins, Open Sans;
   font-size: 100%; 
-  font-weight: 100; 
+  font-weight: 600; 
   text-align: center;
   line-height: 100%;
   color:#834257;
@@ -120,21 +120,25 @@ z-index: 999999;
 }
 
 #arrow {
-  position:relative;
+  position:fixed;
   left: 0;
   right: 0;
-  z-index: 20;
+  top: 15vh;
   margin: auto;
   font-family: Poppins, Open Sans;
   font-size: 100%; 
   font-weight: 100; 
   text-align: center;
   line-height: 100%;
-  color:#834257;
-  width: 50vw;  
+  color:#834257; 
   bottom: 0%; 
   /* border-style: solid; */
   z-index: 100;
+  opacity: 0;
+}
+
+#art {
+  height: 80vh;
 }
 
 #announce {
@@ -145,15 +149,14 @@ z-index: 999999;
   margin: auto;
   font-family: Poppins, Open Sans;
   font-size: 5vmin; 
-  font-weight: 100; 
+  font-weight: 600; 
   text-align: center;
   line-height: 100%;
   color:#834257;
   width: 45vw; 
-  height: 15vmin; 
+  height: 15vh; 
   bottom: 20%; 
   opacity: 0;
-  /* border-style: solid; */
 }
 
 @media screen and (orientation:portrait) {
@@ -186,16 +189,29 @@ z-index: 999999;
     margin:auto;
   }
 
-#names {
-  top: 10%;
-}
+  #names {
+    width: 90vw; 
+    height: 90vw; 
+    top:15%;
+    font-size: 10vw;
+  }
 
-#wreath {
-  top: 10%;
-}
+  #wreath {
+    width: 90vw; 
+    height: 90vw; 
+    top:15%;
+  }
 
-#arrow {
-  width: 85vw;
-}
+  #arrow {
+    width: 85vw;
+  }
+
+  #announce {
+    position: fixed;
+    width: 45vw; 
+    height: 15vw; 
+    top: 40vh;
+    bottom: 20vh; 
+  }
 
 }

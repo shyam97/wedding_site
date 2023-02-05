@@ -5,18 +5,6 @@ $(window).scroll(function(){
 
     // ------------------------------------------------------------
 
-    if (curScrollVal > 600) {
-      document.getElementById('twonames').innerHTML = "Sneha <br> <span style=\"font-size:50%;\">&</span> <br> Shyam"
-      $("#names").css("line-height",0.75);
-    }
-
-    else {
-      document.getElementById('twonames').innerHTML = "Sneha & &nbsp<br>&nbsp&nbsp&nbsp Shyam"
-      $("#names").css("line-height",1.1);
-    }
-
-    // ------------------------------------------------------------
-
     if (window.innerHeight > window.innerWidth) {
 
       var stopPoint = -10 + (window.innerHeight - 400)*0.15;
@@ -31,41 +19,82 @@ $(window).scroll(function(){
       $("#announce").css("height","8vmin","bottom","10%")
     }
 
-    // ------------------------------------------------------------
-
-    var opacgetting1 = (curScroll - 2)*4;
-      var opacgetting2 = (3 - curScroll)*4;
+    if (curScroll > 0.9 && curScroll < 2.1) {
+      var start = 1.1;
+      var end = 1.9;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
 
       if (opacgetting1 < opacgetting2) {
-        $("#names").css("opacity",1);
         if (opacgetting1 > 0) {
           if (opacgetting1 < 1) {
-            $("#announce").css("opacity",opacgetting1);
+            $("#arrow").css("opacity",opacgetting1);
           }
           else {
-            $("#announce").css("opacity",1)
+            $("#arrow").css("opacity",1)
           }
         }
         else {
-          $("#announce").css("opacity",0);
+          $("#arrow").css("opacity",0);
         }
       }
       else {
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
-            $("#announce").css("opacity",opacgetting2);
-            $("#names").css("opacity",opacgetting2);
+            $("#arrow").css("opacity",opacgetting2);
           }
           else {
-            $("#announce").css("opacity",1)
+            $("#arrow").css("opacity",1)
           }
         }
         else {
-          $("#names").css("opacity",0);
-          $("#announce").css("opacity",0)
+          $("#arrow").css("opacity",0)
         }
+      } 
+    }
+
+    // ------------------------------------------------------------
+
+    if (curScroll > 1.9 && curScroll < 3.1)  {
+        var start = 2.1;
+        var end = 2.9;
+        var opacgetting1 = (curScroll - start)*4;
+        var opacgetting2 = (end - curScroll)*4;
+
+        if (opacgetting1 < opacgetting2) {
+          $("#names").css("opacity",1);
+          if (opacgetting1 > 0) {
+            if (opacgetting1 < 1) {
+              $("#announce").css("opacity",opacgetting1);
+            }
+            else {
+              $("#announce").css("opacity",1)
+            }
+          }
+          else {
+            $("#announce").css("opacity",0);
+          }
+        }
+        else {
+          if (opacgetting2 > 0) {
+            if (opacgetting2 < 1) {
+              $("#announce").css("opacity",opacgetting2);
+              $("#names").css("opacity",opacgetting2);
+            }
+            else {
+              $("#announce").css("opacity",1)
+            }
+          }
+          else {
+            $("#names").css("opacity",0);
+            $("#announce").css("opacity",0)
+          }
+        } 
       }
     // ------------------------------------------------------------
+
+
+
 
   }
 
