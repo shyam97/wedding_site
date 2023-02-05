@@ -181,6 +181,7 @@ z-index: 999999;
     position: fixed;
     top: 80vh;
     left: 10vw;
+    bottom: 0%;
     float:left;
     margin:auto;
   }
