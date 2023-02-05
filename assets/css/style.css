@@ -81,14 +81,14 @@ z-index: 999999;
 
 .heading1 {
   font-family: Poppins, Open Sans;
-  font-size: 120%;
+  font-size: 150%;
   font-weight: 600;
   margin: auto;
 }
 
 .heading2 {
   font-family: Poppins, Open Sans;
-  font-size: 90%; 
+  font-size: 120%; 
   font-weight: 600; 
   vertical-align: top;
   margin: auto;
@@ -121,8 +121,8 @@ z-index: 999999;
 
 #arrow {
   position:fixed;
-  left: 0;
-  right: 0;
+  left: 10%;
+  right: auto;
   top: 15vh;
   margin: auto;
   font-family: Poppins, Open Sans;
@@ -134,6 +134,18 @@ z-index: 999999;
   bottom: 0%; 
   /* border-style: solid; */
   z-index: 100;
+  opacity: 0;
+}
+
+#path_web {
+  position: fixed;
+  margin:auto;
+  top: 50vh;
+  left: 52.5vw;
+  z-index: 1000000;
+}
+
+#path_mobile {
   opacity: 0;
 }
 
