@@ -21,9 +21,9 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------------
 
-    if (curScroll > 0.4 && curScroll < 1.6) {
-      var start = 0.6;
-      var end = 1.4;
+    if (curScroll < 1.4) {
+      var start = 0.3;
+      var end = 1.3;
       var opacgetting2 = (end - curScroll)*4;
 
         if (opacgetting2 > 0) {
@@ -31,19 +31,23 @@ $(window).scroll(function(){
             $("#wreath").css("opacity",opacgetting2);
           }
           else {
-            $("#wreath").css("opacity",1)
+            $("#wreath").css("opacity",1);
           }
         }
         else {
-          $("#wreath").css("opacity",0)
+          $("#wreath").css("opacity",0);
         }
       } 
+      else {
+        $("#wreath").css("opacity",0);
+        
+      }
 
     // ----------------------------------------------------------------
 
-    if (curScroll > 1.4 && curScroll < 2.6) {
-      var start = 1.6;
-      var end = 2.4;
+    if (curScroll > 1.2 && curScroll < 2.4) {
+      var start = 1.3;
+      var end = 2.3;
       var opacgetting1 = (curScroll - start)*4;
       var opacgetting2 = (end - curScroll)*4;
 
@@ -89,9 +93,9 @@ $(window).scroll(function(){
 
     // ------------------------------------------------------------
 
-    if (curScroll > 2.4 && curScroll < 3.6)  {
-        var start = 2.6;
-        var end = 3.4;
+    if (curScroll > 2.2 && curScroll < 3.4)  {
+        var start = 2.3;
+        var end = 3.3;
         var opacgetting1 = (curScroll - start)*4;
         var opacgetting2 = (end - curScroll)*4;
 

@@ -224,8 +224,8 @@ z-index: 999999;
 
   #names {
     width: 90vw; 
-    height: 90vw; 
-    top:15%;
+    height: 40vh; 
+    top:15vh;
     font-size: 10vw;
   }
 
@@ -252,7 +252,7 @@ z-index: 999999;
     position: fixed;
     width: 45vw; 
     height: 15vw; 
-    top: 40vh;
+    top: 50vh;
     bottom: 20vh; 
   }
 
