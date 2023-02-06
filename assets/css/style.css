@@ -10,6 +10,15 @@ body, html {height: 120dvh;
   background-attachment: fixed;
 }
 
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 .button {
   padding: 10vh 20vw;
   text-align: center;
@@ -139,6 +148,23 @@ z-index: 999999;
 .eventbox {
   position:fixed;
   left: 15%;
+  right: auto;
+  top: 15vh;
+  margin: auto;
+  font-family: Poppins, Open Sans;
+  font-size: 100%; 
+  font-weight: 600; 
+  text-align: center;
+  line-height: 100%;
+  color:#834257; 
+  bottom: 0%; 
+  z-index: 100;
+  opacity: 1;
+}
+
+.mapbox {
+  position:fixed;
+  left: 10%;
   right: auto;
   top: 15vh;
   margin: auto;
