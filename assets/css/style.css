@@ -1,6 +1,8 @@
 
 body,h1 {font-family: "Playfair Display", sans-serif}
 body, html {height: 100%;
+  overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
     background: #f3cdcb;
     /* background: linear-gradient(231deg, rgba(255,0,136,1) 0%, rgba(37,122,251,1) 100%); */
   /* min-height: 100%; */
