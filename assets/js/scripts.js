@@ -1,23 +1,23 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
 
+if (window.innerHeight > window.innerWidth) {
+
+  var stopPoint = -10 + (window.innerHeight - 400)*0.15;
+
+  $(".centertext").css("height",stopPoint+"vmin")
+}
+
+else {
+
+  $(".centertext").css("height","8vmin","bottom","10%")
+}
+
 $(window).scroll(function(){
     var curScrollVal = $(window).scrollTop();
     var curScroll = curScrollVal/window.innerHeight;
     // document.getElementById("demo").innerHTML = curScrollVal + "," + window.innerWidth + "," + window.innerHeight;
 
     // ------------------------------------------------------------
-
-    if (window.innerHeight > window.innerWidth) {
-
-      var stopPoint = -10 + (window.innerHeight - 400)*0.15;
-    
-      $(".centertext").css("height",stopPoint+"vmin")
-    }
-
-    else {
-
-      $(".centertext").css("height","8vmin","bottom","10%")
-    }
 
     // ----------------------------------------------------------------
 
