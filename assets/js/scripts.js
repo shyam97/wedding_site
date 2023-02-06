@@ -108,13 +108,16 @@ $(window).scroll(function(){
           if (opacgetting1 > 0) {
             if (opacgetting1 < 1) {
               $("#announce").css("opacity",opacgetting1);
+              $("#announceimg").css("opacity",opacgetting1*0.3);
             }
             else {
               $("#announce").css("opacity",1)
+              $("#announceimg").css("opacity",0.3);
             }
           }
           else {
             $("#announce").css("opacity",0);
+            $("#announceimg").css("opacity",0);
           }
         }
         else {
@@ -122,14 +125,17 @@ $(window).scroll(function(){
             if (opacgetting2 < 1) {
               $("#announce").css("opacity",opacgetting2);
               $("#names").css("opacity",opacgetting2);
+              $("#announceimg").css("opacity",opacgetting2*0.3);
             }
             else {
               $("#announce").css("opacity",1)
+              $("#announceimg").css("opacity",0.3);
             }
           }
           else {
             $("#names").css("opacity",0);
-            $("#announce").css("opacity",0)
+            $("#announce").css("opacity",0);
+            $("#announceimg").css("opacity",0);
           }
         } 
       }
@@ -140,6 +146,7 @@ $(window).scroll(function(){
 
       if (curScroll < 1.6 || curScroll > 2.4) {
         $("#announce").css("opacity",0);
+        $("#announceimg").css("opacity",0);
       }
 
     // ------------------------------------------------------------
@@ -154,22 +161,27 @@ $(window).scroll(function(){
         if (opacgetting1 > 0) {
           if (opacgetting1 < 1) {
             $("#invited").css("opacity",opacgetting1);
+            $("#inviteimg").css("opacity",opacgetting1*0.3);
           }
           else {
             $("#invited").css("opacity",1)
+            $("#inviteimg").css("opacity",0.3);
           }
         }
         else {
           $("#invited").css("opacity",0);
+          $("#inviteimg").css("opacity",0);
         }
       }
       else {
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
             $("#invited").css("opacity",opacgetting2);
+            $("#inviteimg").css("opacity",opacgetting2*0.3);
           }
           else {
-            $("#invited").css("opacity",1)
+            $("#invited").css("opacity",1);
+            $("#inviteimg").css("opacity",0.3);
           }
         }
         else {
@@ -222,6 +234,126 @@ $(window).scroll(function(){
       $("#events").css("opacity",0);
     }
 
+    // ----------------------------------------------------
+
+    if (curScroll > 4.4 && curScroll < 6.3) {
+      var start = 4.6;
+      var end = 6.2;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#reception1").css("opacity",opacgetting1);
+          }
+          else {
+            $("#reception1").css("opacity",1)
+          }
+        }
+        else {
+          $("#reception1").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#reception1").css("opacity",opacgetting2);
+          }
+          else {
+            $("#reception1").css("opacity",1)
+          }
+        }
+        else {
+          $("#reception1").css("opacity",0)
+        }
+      } 
+    }
+
+    if (curScroll < 4.6 || curScroll > 6.2) {
+      $("#reception1").css("opacity",0);
+    }
+
+    // -----------------------------------------------------------
+
+    if (curScroll > 4.8 && curScroll < 6.3) {
+      var start = 5;
+      var end = 6.2;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#wedding").css("opacity",opacgetting1);
+          }
+          else {
+            $("#wedding").css("opacity",1)
+          }
+        }
+        else {
+          $("#wedding").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#wedding").css("opacity",opacgetting2);
+          }
+          else {
+            $("#wedding").css("opacity",1)
+          }
+        }
+        else {
+          $("#wedding").css("opacity",0)
+        }
+      } 
+    }
+
+    if (curScroll < 5 || curScroll > 6.2) {
+      $("#wedding").css("opacity",0);
+    }
+
+    // ----------------------------------------------------
+
+    if (curScroll > 5.2 && curScroll < 6.3) {
+      var start = 5.4;
+      var end = 6.2;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#reception2").css("opacity",opacgetting1);
+          }
+          else {
+            $("#reception2").css("opacity",1)
+          }
+        }
+        else {
+          $("#reception2").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#reception2").css("opacity",opacgetting2);
+          }
+          else {
+            $("#reception2").css("opacity",1)
+          }
+        }
+        else {
+          $("#reception2").css("opacity",0)
+        }
+      } 
+    }
+
+    if (curScroll < 5.4 || curScroll > 6.2) {
+      $("#reception2").css("opacity",0);
+    }
+    
   }
 
 ); 

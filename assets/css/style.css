@@ -41,7 +41,6 @@ width: 100%;
 display: flex;  
 align-items: center;    
 background-color: rgba(255, 255, 255, 0);
-backdrop-filter: blur(10px);
 text-align: left;
 z-index: 999999;
 } 
@@ -54,7 +53,7 @@ z-index: 999999;
   /* bottom: 4vh; */
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   margin: auto;
   font-family: Playfair Display;
   font-weight: 800;
@@ -137,6 +136,40 @@ z-index: 999999;
   opacity: 0;
 }
 
+.eventbox {
+  position:fixed;
+  left: 15%;
+  right: auto;
+  top: 15vh;
+  margin: auto;
+  font-family: Poppins, Open Sans;
+  font-size: 100%; 
+  font-weight: 600; 
+  text-align: center;
+  line-height: 100%;
+  color:#834257; 
+  bottom: 0%; 
+  z-index: 100;
+  opacity: 1;
+}
+
+.linebox {
+  position:fixed;
+  left: 80%;
+  right: auto;
+  top: 15vh;
+  margin: auto;
+  font-family: Poppins, Open Sans;
+  font-size: 100%; 
+  font-weight: 600; 
+  text-align: center;
+  line-height: 100%;
+  color:#834257; 
+  bottom: 0%; 
+  z-index: 100;
+  opacity: 1;
+}
+
 #path_web {
   position: fixed;
   margin:auto;
@@ -189,7 +222,7 @@ z-index: 999999;
   top:85vh;
   left: auto;
   right: 10vw;
-  z-index: 10;
+  z-index: 100;
   margin: auto;
   font-family: Poppins, Open Sans;
   font-size: 100%; 
@@ -217,7 +250,7 @@ z-index: 999999;
     line-height: 0;
     top: 87.5vh;
     left: 10vw;
-    bottom: 0%;
+    bottom: 3%;
     float:left;
     margin:auto;
   }
@@ -267,6 +300,78 @@ z-index: 999999;
     left: 50vw;
     right:auto;
     margin:auto;    
+  }
+
+  .eventbox {
+    position:fixed;
+    display:block;
+    margin:auto;
+    top: 20vh;
+    height:80vh;
+    width: 80vw;
+    bottom:20%;
+  }
+
+  .linebox {
+    position:fixed;
+    display:block;
+    margin:auto;
+    top: 33vh;
+    height:80vh;
+    width: 20vw;
+    bottom:20%;
+  }
+
+  .eventdetailsbox {
+    float:left;
+    display: block;
+    margin:auto;
+    width: 90%;
+    top: 20vh;
+    text-align:center;
+    margin-top: 10vh;
+  }
+
+  .eventpath {
+    float:left;
+    position: fixed;
+    display: block;
+    margin:auto;
+    width: 10%;
+    text-align:center;
+  }
+
+  .eventline {
+    display: inline-block;
+    height: 3px; 
+    width: 70%; 
+    margin:auto; 
+    background-color: #834257; 
+    border-radius: 3px;
+  }
+
+  .eventtitle {
+    font-size: 150%;
+  }
+
+  .eventtime {
+    line-height: 3vh;
+  }
+
+  .eventloc {
+    line-height: 3vh;
+  }
+
+  #path2 {
+    top:38vh;
+  }
+
+  #path3 {
+    top:59.5vh;
+  }
+
+  #reception1 {
+    opacity: 0;
   }
 
 }
