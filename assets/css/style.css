@@ -11,12 +11,12 @@ body, html {height: 120dvh;
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden; /* or any other value */
+  overflow-y: auto; 
 }
 
 .button {
