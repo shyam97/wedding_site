@@ -1,3 +1,5 @@
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 $(window).scroll(function(){
     var curScrollVal = $(window).scrollTop();
     var curScroll = curScrollVal/window.innerHeight;
