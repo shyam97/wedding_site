@@ -9,15 +9,12 @@ $(window).scroll(function(){
 
       var stopPoint = -10 + (window.innerHeight - 400)*0.15;
     
-      $("#announce").css("height",stopPoint+"vmin")
-      $("#announce").css("bottom","25%")
-      $("#invited").css("height",stopPoint+"vmin")
-      $("#invited").css("bottom","25%")
+      $(".centertext").css("height",stopPoint+"vmin")
     }
 
     else {
 
-      $("#invited").css("height","8vmin","bottom","10%")
+      $(".centertext").css("height","8vmin","bottom","10%")
     }
 
     // ----------------------------------------------------------------
@@ -144,6 +141,7 @@ $(window).scroll(function(){
       if (curScroll < 1.6 || curScroll > 2.4) {
         $("#announce").css("opacity",0);
       }
+
     // ------------------------------------------------------------
 
     if (curScroll > 2.4 && curScroll < 3.6) {
@@ -184,6 +182,45 @@ $(window).scroll(function(){
       $("#invited").css("opacity",0);
     }
 
+// ------------------------------------------------------------
+
+    if (curScroll > 3.4 && curScroll < 4.6) {
+      var start = 3.6;
+      var end = 4.4;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#events").css("opacity",opacgetting1);
+          }
+          else {
+            $("#events").css("opacity",1)
+          }
+        }
+        else {
+          $("#events").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#events").css("opacity",opacgetting2);
+          }
+          else {
+            $("#events").css("opacity",1)
+          }
+        }
+        else {
+          $("#events").css("opacity",0)
+        }
+      } 
+    }
+
+    if (curScroll < 3.6 || curScroll > 4.4) {
+      $("#events").css("opacity",0);
+    }
 
   }
 

@@ -155,25 +155,7 @@ z-index: 999999;
   width:auto;
 }
 
-#announce {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 20;
-  margin: auto;
-  font-family: Poppins, Open Sans;
-  font-size: 5vmin; 
-  font-weight: 600; 
-  text-align: center;
-  line-height: 100%;
-  color:#834257;
-  width: 45vw; 
-  height: 15vh; 
-  bottom: 20%; 
-  opacity: 0;
-}
-
-#invited {
+.centertext {
   position: fixed;
   left: 0;
   right: 0;
@@ -266,7 +248,7 @@ z-index: 999999;
     margin:auto;
   }
 
-  #announce {
+  .centertext {
     position: fixed;
     width: 45vw; 
     height: 15vw; 
@@ -285,14 +267,6 @@ z-index: 999999;
     left: 50vw;
     right:auto;
     margin:auto;    
-  }
-
-  #invited {
-    position: fixed;
-    width: 45vw; 
-    height: 15vw; 
-    top: 50vh;
-    bottom: 20vh; 
   }
 
 }
