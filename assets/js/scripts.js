@@ -22,9 +22,9 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------------
 
-    if (curScroll < 1.1) {
-      var start = 0.1;
-      var end = 1;
+    if (curScroll < 0.6) {
+      var start = 0;
+      var end = 0.4;
       var opacgetting2 = (end - curScroll)*4;
 
         if (opacgetting2 > 0) {
@@ -46,9 +46,9 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------------
 
-    if (curScroll > 0.9 && curScroll < 2.1) {
-      var start = 1;
-      var end = 2;
+    if (curScroll > 0.4 && curScroll < 1.6) {
+      var start = 0.6;
+      var end = 1.4;
       var opacgetting1 = (curScroll - start)*4;
       var opacgetting2 = (end - curScroll)*4;
 
@@ -92,11 +92,17 @@ $(window).scroll(function(){
       } 
     }
 
+    if (curScroll < 0.6 || curScroll > 1.4) {
+      $("#arrow").css("opacity",0)
+      $("#cartoon").css("opacity",0);
+      $("#path_mobile").css("opacity",0);
+    }
+
     // ------------------------------------------------------------
 
-    if (curScroll > 1.9 && curScroll < 3.1)  {
-        var start = 2;
-        var end = 3;
+    if (curScroll > 1.4 && curScroll < 2.6)  {
+        var start = 1.6;
+        var end = 2.4;
         var opacgetting1 = (curScroll - start)*4;
         var opacgetting2 = (end - curScroll)*4;
 
@@ -134,11 +140,15 @@ $(window).scroll(function(){
       if (curScroll > 3) {
         $("#names").css("opacity",0);
       }
+
+      if (curScroll < 1.6 || curScroll > 2.4) {
+        $("#announce").css("opacity",0);
+      }
     // ------------------------------------------------------------
 
-    if (curScroll > 2.9 && curScroll < 4.1) {
-      var start = 3;
-      var end = 4;
+    if (curScroll > 2.4 && curScroll < 3.6) {
+      var start = 2.6;
+      var end = 3.4;
       var opacgetting1 = (curScroll - start)*4;
       var opacgetting2 = (end - curScroll)*4;
 
@@ -168,6 +178,10 @@ $(window).scroll(function(){
           $("#invited").css("opacity",0)
         }
       } 
+    }
+
+    if (curScroll < 2.6 || curScroll > 3.4) {
+      $("#invited").css("opacity",0);
     }
 
 
