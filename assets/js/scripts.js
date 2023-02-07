@@ -447,9 +447,9 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------
 
-    if (curScroll > 7.1 && curScroll < 9.3) {
-      var start = 7.3;
-      var end = 9.1;
+    if (curScroll > 8.1 && curScroll < 10.3) {
+      var start = 8.3;
+      var end = 10.1;
       var opacgetting1 = (curScroll - start)*4;
       var opacgetting2 = (end - curScroll)*4;
 
@@ -481,15 +481,15 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 7.3 || curScroll > 9.1) {
+    if (curScroll < 8.3 || curScroll > 10.1) {
       $("#welcome").css("opacity",0);
     }
     
     // --------------------------------------------------------------
 
-    if (curScroll > 8.1 && curScroll < 9.3) {
-      var start = 8.3;
-      var end = 9.1;
+    if (curScroll > 9.1 && curScroll < 10.3) {
+      var start = 9.3;
+      var end = 10.1;
       var opacgetting1 = (curScroll - start)*4;
       var opacgetting2 = (end - curScroll)*4;
 
@@ -521,15 +521,15 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 6.3 || curScroll > 9.1) {
+    if (curScroll < 9.3 || curScroll > 10.1) {
       $("#welcome2").css("opacity",0);
     }
 
     // -------------------------------------------------------------
 
-    if (curScroll > 9.1 && curScroll < 10.3) {
-      var start = 9.3;
-      var end = 10.1;
+    if (curScroll > 10.1 && curScroll < 11.3) {
+      var start = 10.3;
+      var end = 11.1;
       var opacgetting1 = (curScroll - start)*4;
       var opacgetting2 = (end - curScroll)*4;
 
@@ -567,15 +567,15 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 9.3 || curScroll > 10.1) {
+    if (curScroll < 10.3 || curScroll > 11.1) {
       $("#bye").css("opacity",0);
       $("#byeimg").css("opacity",0);
     }
 
     // -------------------------------------------------------------
 
-    if (curScroll > 10.1) {
-      var start = 10.3;
+    if (curScroll > 11.1) {
+      var start = 11.3;
       var opacgetting1 = (curScroll - start)*4;
 
         if (opacgetting1 > 0) {
@@ -594,7 +594,7 @@ $(window).scroll(function(){
         }
     }
 
-    if (curScroll < 10.3) {
+    if (curScroll < 11.3) {
       $("#names2").css("opacity",0);
       $("#wreath2").css("opacity",0);
     }
