@@ -28,18 +28,18 @@ $(window).scroll(function(){
 
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
-            $("#wreath").css("opacity",opacgetting2);
+            $("#wreath1").css("opacity",opacgetting2);
           }
           else {
-            $("#wreath").css("opacity",1);
+            $("#wreath1").css("opacity",1);
           }
         }
         else {
-          $("#wreath").css("opacity",0);
+          $("#wreath1").css("opacity",0);
         }
       } 
       else {
-        $("#wreath").css("opacity",0);
+        $("#wreath1").css("opacity",0);
         
       }
 
@@ -106,7 +106,7 @@ $(window).scroll(function(){
         var opacgetting2 = (end - curScroll)*4;
 
         if (opacgetting1 < opacgetting2) {
-          $("#names").css("opacity",1);
+          $("#names1").css("opacity",1);
           if (opacgetting1 > 0) {
             if (opacgetting1 < 1) {
               $("#announce").css("opacity",opacgetting1);
@@ -126,7 +126,7 @@ $(window).scroll(function(){
           if (opacgetting2 > 0) {
             if (opacgetting2 < 1) {
               $("#announce").css("opacity",opacgetting2);
-              $("#names").css("opacity",opacgetting2);
+              $("#names1").css("opacity",opacgetting2);
               $("#announceimg").css("opacity",opacgetting2*0.3);
             }
             else {
@@ -135,7 +135,7 @@ $(window).scroll(function(){
             }
           }
           else {
-            $("#names").css("opacity",0);
+            $("#names1").css("opacity",0);
             $("#announce").css("opacity",0);
             $("#announceimg").css("opacity",0);
           }
@@ -143,7 +143,7 @@ $(window).scroll(function(){
       }
 
       if (curScroll > 3) {
-        $("#names").css("opacity",0);
+        $("#names1").css("opacity",0);
       }
 
       if (curScroll < 1.6 || curScroll > 2.4) {
@@ -166,7 +166,7 @@ $(window).scroll(function(){
             $("#inviteimg").css("opacity",opacgetting1*0.3);
           }
           else {
-            $("#invited").css("opacity",1)
+            $("#invited").css("opacity",1);
             $("#inviteimg").css("opacity",0.3);
           }
         }
@@ -187,13 +187,15 @@ $(window).scroll(function(){
           }
         }
         else {
-          $("#invited").css("opacity",0)
+          $("#invited").css("opacity",0);
+          $("#inviteimg").css("opacity",0);
         }
       } 
     }
 
     if (curScroll < 2.6 || curScroll > 3.4) {
       $("#invited").css("opacity",0);
+      $("#inviteimg").css("opacity",0);
     }
 
 // ------------------------------------------------------------
@@ -445,6 +447,46 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------
 
+    if (curScroll > 7.1 && curScroll < 9.3) {
+      var start = 7.3;
+      var end = 9.1;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#welcome").css("opacity",opacgetting1);
+          }
+          else {
+            $("#welcome").css("opacity",1)
+          }
+        }
+        else {
+          $("#welcome").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#welcome").css("opacity",opacgetting2);
+          }
+          else {
+            $("#welcome").css("opacity",1)
+          }
+        }
+        else {
+          $("#welcome").css("opacity",0)
+        }
+      } 
+    }
+
+    if (curScroll < 7.3 || curScroll > 9.1) {
+      $("#welcome").css("opacity",0);
+    }
+    
+    // --------------------------------------------------------------
+
     if (curScroll > 8.1 && curScroll < 9.3) {
       var start = 8.3;
       var end = 9.1;
@@ -454,42 +496,108 @@ $(window).scroll(function(){
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
           if (opacgetting1 < 1) {
-            $("#coimbatore").css("opacity",opacgetting1);
-            $("#coimbatoremap").css("opacity",opacgetting1);
+            $("#welcome2").css("opacity",opacgetting1);
           }
           else {
-            $("#coimbatore").css("opacity",1)
-            $("#coimbatoremap").css("opacity",1);
+            $("#welcome2").css("opacity",1)
           }
         }
         else {
-          $("#coimbatore").css("opacity",0);
-          $("#coimbatoremap").css("opacity",0);
+          $("#welcome2").css("opacity",0);
         }
       }
       else {
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
-            $("#coimbatore").css("opacity",opacgetting2);
-            $("#coimbatoremap").css("opacity",opacgetting2);
+            $("#welcome2").css("opacity",opacgetting2);
           }
           else {
-            $("#coimbatore").css("opacity",1)
-            $("#coimbatoremap").css("opacity",1);
+            $("#welcome2").css("opacity",1)
           }
         }
         else {
-          $("#coimbatore").css("opacity",0)
-          $("#coimbatoremap").css("opacity",0);
+          $("#welcome2").css("opacity",0)
         }
       } 
     }
 
-    if (curScroll < 8.3 || curScroll > 9.1) {
-      $("#coimbatore").css("opacity",0);
-      $("#coimbatoremap").css("opacity",0);
+    if (curScroll < 6.3 || curScroll > 9.1) {
+      $("#welcome2").css("opacity",0);
     }
-    
+
+    // -------------------------------------------------------------
+
+    if (curScroll > 9.1 && curScroll < 10.3) {
+      var start = 9.3;
+      var end = 10.1;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#bye").css("opacity",opacgetting1);
+            $("#byeimg").css("opacity",opacgetting1*0.3);
+          }
+          else {
+            $("#bye").css("opacity",1);
+            $("#byeimg").css("opacity",0.3);
+          }
+        }
+        else {
+          $("#bye").css("opacity",0);
+          $("#byeimg").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#bye").css("opacity",opacgetting2);
+            $("#byeimg").css("opacity",opacgetting2*0.3);
+          }
+          else {
+            $("#bye").css("opacity",1);
+            $("#byeimg").css("opacity",0.3);
+          }
+        }
+        else {
+          $("#bye").css("opacity",0);
+          $("#byeimg").css("opacity",0);
+        }
+      } 
+    }
+
+    if (curScroll < 9.3 || curScroll > 10.1) {
+      $("#bye").css("opacity",0);
+      $("#byeimg").css("opacity",0);
+    }
+
+    // -------------------------------------------------------------
+
+    if (curScroll > 10.1) {
+      var start = 10.3;
+      var opacgetting1 = (curScroll - start)*4;
+
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#names2").css("opacity",opacgetting1);
+            $("#wreath2").css("opacity",opacgetting1);
+          }
+          else {
+            $("#names2").css("opacity",1);
+            $("#wreath2").css("opacity",1);
+          }
+        }
+        else {
+          $("#names2").css("opacity",0);
+          $("#wreath2").css("opacity",0);
+        }
+    }
+
+    if (curScroll < 10.3) {
+      $("#names2").css("opacity",0);
+      $("#wreath2").css("opacity",0);
+    }
   }
 
 ); 
