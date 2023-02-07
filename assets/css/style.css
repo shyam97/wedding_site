@@ -168,7 +168,7 @@ z-index: 999999;
   line-height: 100%;
   color:#834257; 
   bottom: 0%; 
-  z-index: 100;
+  z-index: 10000;
   opacity: 0;
 }
 
@@ -194,7 +194,7 @@ z-index: 999999;
   margin:auto;
   top: 50vh;
   left: 52.5vw;
-  z-index: 1000000;
+  z-index: 100;
   opacity: 0;
 }
 
