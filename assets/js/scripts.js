@@ -355,6 +355,140 @@ $(window).scroll(function(){
     if (curScroll < 5.4 || curScroll > 6.2) {
       $("#reception2").css("opacity",0);
     }
+
+    // -------------------------------------------------------
+
+    if (curScroll > 6.1 && curScroll < 7.3) {
+      var start = 6.3;
+      var end = 7.1;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#locations").css("opacity",opacgetting1);
+          }
+          else {
+            $("#locations").css("opacity",1)
+          }
+        }
+        else {
+          $("#locations").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#locations").css("opacity",opacgetting2);
+          }
+          else {
+            $("#locations").css("opacity",1)
+          }
+        }
+        else {
+          $("#locations").css("opacity",0)
+        }
+      } 
+    }
+
+    if (curScroll < 6.3 || curScroll > 7.1) {
+      $("#locations").css("opacity",0);
+    }
+
+    // ----------------------------------------------------------
+
+    if (curScroll > 7.1 && curScroll < 8.3) {
+      var start = 7.3;
+      var end = 8.1;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#chennai").css("opacity",opacgetting1);
+            $("#chennaimap").css("opacity",opacgetting1);
+          }
+          else {
+            $("#chennai").css("opacity",1)
+            $("#chennaimap").css("opacity",1);
+          }
+        }
+        else {
+          $("#chennai").css("opacity",0);
+          $("#chennaimap").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#chennai").css("opacity",opacgetting2);
+            $("#chennaimap").css("opacity",opacgetting2);
+          }
+          else {
+            $("#chennai").css("opacity",1)
+            $("#chennaimap").css("opacity",1);
+          }
+        }
+        else {
+          $("#chennai").css("opacity",0)
+          $("#chennaimap").css("opacity",0);
+        }
+      } 
+    }
+
+    if (curScroll < 7.3 || curScroll > 8.1) {
+      $("#chennai").css("opacity",0);
+      $("#chennaimap").css("opacity",0);
+    }
+
+    // ----------------------------------------------------------
+
+    if (curScroll > 8.1 && curScroll < 9.3) {
+      var start = 8.3;
+      var end = 9.1;
+      var opacgetting1 = (curScroll - start)*4;
+      var opacgetting2 = (end - curScroll)*4;
+
+      if (opacgetting1 < opacgetting2) {
+        if (opacgetting1 > 0) {
+          if (opacgetting1 < 1) {
+            $("#coimbatore").css("opacity",opacgetting1);
+            $("#coimbatoremap").css("opacity",opacgetting1);
+          }
+          else {
+            $("#coimbatore").css("opacity",1)
+            $("#coimbatoremap").css("opacity",1);
+          }
+        }
+        else {
+          $("#coimbatore").css("opacity",0);
+          $("#coimbatoremap").css("opacity",0);
+        }
+      }
+      else {
+        if (opacgetting2 > 0) {
+          if (opacgetting2 < 1) {
+            $("#coimbatore").css("opacity",opacgetting2);
+            $("#coimbatoremap").css("opacity",opacgetting2);
+          }
+          else {
+            $("#coimbatore").css("opacity",1)
+            $("#coimbatoremap").css("opacity",1);
+          }
+        }
+        else {
+          $("#coimbatore").css("opacity",0)
+          $("#coimbatoremap").css("opacity",0);
+        }
+      } 
+    }
+
+    if (curScroll < 8.3 || curScroll > 9.1) {
+      $("#coimbatore").css("opacity",0);
+      $("#coimbatoremap").css("opacity",0);
+    }
     
   }
 
