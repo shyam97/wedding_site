@@ -1,18 +1,11 @@
 // document.addEventListener('contextmenu', event => event.preventDefault());
-
-// if (window.innerHeight > window.innerWidth) {
-
-//   var stopPoint = -10 + (window.innerHeight - 400)*0.15;
-
-//   $(".centertext").css("height",stopPoint+"vmin")
-// }
-
 // else {
 
 //   $(".centertext").css("height","8vmin","bottom","10%")
 // }
 
 $(window).scroll(function(){
+
     var curScrollVal = $(window).scrollTop();
     var curScroll = curScrollVal/window.innerHeight;
     // document.getElementById("demo").innerHTML = curScrollVal + "," + window.innerWidth + "," + window.innerHeight;
@@ -21,53 +14,70 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------------
 
-    if (curScroll < 0.6) {
+    if (curScroll < 1.2) {
+
+      $("#scroll").css("visibility","visible");
+      $("#wreath1").css("visibility","visible");
+      $("#names1").css("visibility","visible");
+
       var start = 0;
-      var end = 0.4;
-      var opacgetting2 = (end - curScroll)*4;
+      var end = 0.8;
+      var opacgetting2 = (end - curScroll)*2;
 
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
+            $("#scroll").css("opacity",opacgetting2);
             $("#wreath1").css("opacity",opacgetting2);
+            $("#names1").css("opacity",opacgetting2);
           }
           else {
+            $("#scroll").css("opacity",1);
             $("#wreath1").css("opacity",1);
+            $("#names1").css("opacity",1);
           }
         }
         else {
+          $("#scroll").css("opacity",0);
           $("#wreath1").css("opacity",0);
+          $("#names1").css("opacity",0);
         }
       } 
       else {
+        $("#scroll").css("opacity",0);
         $("#wreath1").css("opacity",0);
+        $("#names1").css("opacity",0);
+        $("#scroll").css("visibility","hidden");
+        $("#wreath1").css("visibility","hidden");
+        $("#names1").css("visibility","hidden");
         
       }
 
     // ----------------------------------------------------------------
 
-    if (curScroll > 0.4 && curScroll < 1.6) {
-      var start = 0.6;
-      var end = 1.4;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 0.8 && curScroll < 3.2) {
+
+      $("#arrow").css("visibility","visible");
+      $("#cartoon").css("visibility","visible");
+
+      var start = 1.2;
+      var end = 2.8;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
           if (opacgetting1 < 1) {
             $("#arrow").css("opacity",opacgetting1);
             $("#cartoon").css("opacity",opacgetting1);
-            $("#path_mobile").css("opacity",opacgetting1);
           }
           else {
             $("#arrow").css("opacity",1)
             $("#cartoon").css("opacity",1);
-            $("#path_mobile").css("opacity",1);
           }
         }
         else {
           $("#arrow").css("opacity",0);
           $("#cartoon").css("opacity",0);
-          $("#path_mobile").css("opacity",0);
         }
       }
       else {
@@ -75,38 +85,40 @@ $(window).scroll(function(){
           if (opacgetting2 < 1) {
             $("#arrow").css("opacity",opacgetting2);
             $("#cartoon").css("opacity",opacgetting2);
-            $("#path_mobile").css("opacity",opacgetting2);
           }
           else {
             $("#arrow").css("opacity",1)
             $("#cartoon").css("opacity",1);
-            $("#path_mobile").css("opacity",1);
           }
         }
         else {
           $("#arrow").css("opacity",0)
           $("#cartoon").css("opacity",0);
-          $("#path_mobile").css("opacity",0);
         }
       } 
     }
 
-    if (curScroll < 0.6 || curScroll > 1.4) {
+    if (curScroll < 1.2 || curScroll > 2.8) {
       $("#arrow").css("opacity",0)
       $("#cartoon").css("opacity",0);
-      $("#path_mobile").css("opacity",0);
+      $("#arrow").css("visibility","hidden");
+      $("#cartoon").css("visibility","hidden");
     }
 
     // ------------------------------------------------------------
 
-    if (curScroll > 1.4 && curScroll < 2.6)  {
-        var start = 1.6;
-        var end = 2.4;
-        var opacgetting1 = (curScroll - start)*4;
-        var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 2.8 && curScroll < 5.2)  {
+
+      $("#announce").css("visibility","visible");
+      $("#announceimg").css("visibility","visible");
+
+        var start = 3.2;
+        var end = 4.8;
+        var opacgetting1 = (curScroll - start)*2;
+        var opacgetting2 = (end - curScroll)*2;
 
         if (opacgetting1 < opacgetting2) {
-          $("#names1").css("opacity",1);
+
           if (opacgetting1 > 0) {
             if (opacgetting1 < 1) {
               $("#announce").css("opacity",opacgetting1);
@@ -126,7 +138,6 @@ $(window).scroll(function(){
           if (opacgetting2 > 0) {
             if (opacgetting2 < 1) {
               $("#announce").css("opacity",opacgetting2);
-              $("#names1").css("opacity",opacgetting2);
               $("#announceimg").css("opacity",opacgetting2*0.3);
             }
             else {
@@ -135,29 +146,31 @@ $(window).scroll(function(){
             }
           }
           else {
-            $("#names1").css("opacity",0);
             $("#announce").css("opacity",0);
             $("#announceimg").css("opacity",0);
           }
         } 
       }
 
-      if (curScroll > 3) {
-        $("#names1").css("opacity",0);
-      }
 
-      if (curScroll < 1.6 || curScroll > 2.4) {
+      if (curScroll < 3.2 || curScroll > 4.8) {
         $("#announce").css("opacity",0);
         $("#announceimg").css("opacity",0);
+        $("#announce").css("visibility","hidden");
+        $("#announceimg").css("visibility","hidden");
       }
 
     // ------------------------------------------------------------
 
-    if (curScroll > 2.4 && curScroll < 3.6) {
-      var start = 2.6;
-      var end = 3.4;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 4.8 && curScroll < 7.2) {
+
+      $("#invited").css("visibility","visible");
+      $("#inviteimg").css("visibility","visible");
+
+      var start = 5.2;
+      var end = 6.8;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
@@ -193,58 +206,76 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 2.6 || curScroll > 3.4) {
+    if (curScroll < 5.2 || curScroll > 6.8) {
       $("#invited").css("opacity",0);
       $("#inviteimg").css("opacity",0);
+      $("#invited").css("visibility","hidden");
+      $("#inviteimg").css("visibility","hidden");
     }
 
 // ------------------------------------------------------------
 
-    if (curScroll > 3.4 && curScroll < 4.6) {
-      var start = 3.6;
-      var end = 4.4;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 6.8 && curScroll < 9.2) {
+
+      $(".scroll2").css("visibility","visible");
+      $("#events").css("visibility","visible");
+
+      var start = 7.2;
+      var end = 8.8;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
           if (opacgetting1 < 1) {
+            $(".scroll2").css("opacity",opacgetting1);
             $("#events").css("opacity",opacgetting1);
           }
           else {
+            $(".scroll2").css("opacity",1);
             $("#events").css("opacity",1)
           }
         }
         else {
+          $(".scroll2").css("opacity",0);
           $("#events").css("opacity",0);
         }
       }
       else {
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
+            $(".scroll2").css("opacity",opacgetting2);
             $("#events").css("opacity",opacgetting2);
           }
           else {
+            $(".scroll2").css("opacity",1);
             $("#events").css("opacity",1)
           }
         }
         else {
+          $(".scroll2").css("opacity",0);
           $("#events").css("opacity",0)
         }
       } 
     }
 
-    if (curScroll < 3.6 || curScroll > 4.4) {
+    if (curScroll < 7.2 || curScroll > 8.8) {
+      $(".scroll2").css("opacity",0);
       $("#events").css("opacity",0);
+      $(".scroll2").css("visibility","hidden");
+      $("#events").css("visibility","hidden");
     }
 
     // ----------------------------------------------------
 
-    if (curScroll > 4.4 && curScroll < 6.3) {
-      var start = 4.6;
-      var end = 6.2;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 8.8 && curScroll < 12.6) {
+
+      $("#reception1").css("visibility","visible");
+
+      var start = 9.2;
+      var end = 12.4;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
@@ -274,17 +305,21 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 4.6 || curScroll > 6.2) {
+    if (curScroll < 9.2 || curScroll > 12.4) {
       $("#reception1").css("opacity",0);
+      $("#reception1").css("visibility","hidden");
     }
 
     // -----------------------------------------------------------
 
-    if (curScroll > 4.8 && curScroll < 6.3) {
-      var start = 5;
-      var end = 6.2;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 9.6 && curScroll < 12.6) {
+
+      $("#wedding").css("visibility","visible");
+
+      var start = 10;
+      var end = 12.4;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
@@ -314,17 +349,21 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 5 || curScroll > 6.2) {
+    if (curScroll < 10 || curScroll > 12.4) {
       $("#wedding").css("opacity",0);
+      $("#wedding").css("visibility","hidden");
     }
 
     // ----------------------------------------------------
 
-    if (curScroll > 5.2 && curScroll < 6.3) {
-      var start = 5.4;
-      var end = 6.2;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 10.4 && curScroll < 12.6) {
+
+      $("#reception2").css("visibility","visible");
+
+      var start = 10.8;
+      var end = 12.4;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
@@ -354,17 +393,21 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 5.4 || curScroll > 6.2) {
+    if (curScroll < 10.8 || curScroll > 12.4) {
       $("#reception2").css("opacity",0);
+      $("#reception2").css("visibility","hidden");
     }
 
     // -------------------------------------------------------
 
-    if (curScroll > 6.1 && curScroll < 7.3) {
-      var start = 6.3;
-      var end = 7.1;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 12.2 && curScroll < 14.6) {
+
+      $("#locations").css("visibility","visible");
+
+      var start = 12.6;
+      var end = 14.2;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
@@ -394,17 +437,22 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 6.3 || curScroll > 7.1) {
+    if (curScroll < 12.6 || curScroll > 14.2) {
       $("#locations").css("opacity",0);
+      $("#locations").css("visibility","hidden");
     }
 
     // ----------------------------------------------------------
 
-    if (curScroll > 7.1 && curScroll < 8.3) {
-      var start = 7.3;
-      var end = 8.1;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 14.2 && curScroll < 16.6) {
+
+      $("#chennai").css("visibility","visible");
+      $("#chennaimap").css("visibility","visible");
+
+      var start = 14.6;
+      var end = 16.2;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
@@ -440,18 +488,23 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 7.3 || curScroll > 8.1) {
+    if (curScroll < 14.6 || curScroll > 16.2) {
       $("#chennai").css("opacity",0);
       $("#chennaimap").css("opacity",0);
+      $("#chennai").css("visibility","hidden");
+      $("#chennaimap").css("visibility","hidden");
     }
 
     // ----------------------------------------------------------
 
-    if (curScroll > 8.1 && curScroll < 10.3) {
-      var start = 8.3;
-      var end = 10.1;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 16.2 && curScroll < 20.6) {
+
+      $("#welcome").css("visibility","visible");
+
+      var start = 16.6;
+      var end = 20.2;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
@@ -481,57 +534,99 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 8.3 || curScroll > 10.1) {
+    if (curScroll < 16.6 || curScroll > 20.2) {
       $("#welcome").css("opacity",0);
+      $("#welcome").css("visibility","hidden");
     }
     
     // --------------------------------------------------------------
 
-    if (curScroll > 9.1 && curScroll < 10.3) {
-      var start = 9.3;
-      var end = 10.1;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 18.2 && curScroll < 20.6) {
+
+      $("#welcome2").css("visibility","visible");
+
+      var start = 18.6;
+      var end = 20.2;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
+      var red1 = 243;
+      var green1 = 205;
+      var blue1 = 203;
+      var red2 = 131;
+      var green2 = 66;
+      var blue2 = 87;
+      var redp = red1 + (red2-red1)*opacgetting1;
+      var redn = red1 + (red2-red1)*opacgetting2;
+      var bluep = blue1 + (blue2-blue1)*opacgetting1;
+      var bluen = blue1 + (blue2-blue1)*opacgetting2;
+      var greenp = green1 + (green2-green1)*opacgetting1;
+      var greenn = green1 + (green2-green1)*opacgetting2;
+
+      var redpc = red2 + (red1-red2)*opacgetting1;
+      var rednc = red2 + (red1-red2)*opacgetting2;
+      var bluepc = blue2 + (blue1-blue2)*opacgetting1;
+      var bluenc = blue2 + (blue1-blue2)*opacgetting2;
+      var greenpc = green2 + (green1-green2)*opacgetting1;
+      var greennc = green2 + (green1-green2)*opacgetting2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
           if (opacgetting1 < 1) {
             $("#welcome2").css("opacity",opacgetting1);
+            $(".button").css("background-color","rgb("+redp+","+greenp+","+bluep+")");
+            $(".button").css("color","rgb("+redpc+","+greenpc+","+bluepc+")");
           }
           else {
             $("#welcome2").css("opacity",1)
+            $(".button").css("background-color","rgb("+red2+","+green2+","+blue2+")");
+            $(".button").css("color","rgb("+red1+","+green1+","+blue1+")");
           }
         }
         else {
           $("#welcome2").css("opacity",0);
+          $(".button").css("background-color","rgb("+red1+","+green1+","+blue1+")");
+          $(".button").css("color","rgb("+red2+","+green2+","+blue2+")");
         }
       }
       else {
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
             $("#welcome2").css("opacity",opacgetting2);
+            $(".button").css("background-color","rgb("+redn+","+greenn+","+bluen+")");
+            $(".button").css("color","rgb("+rednc+","+greennc+","+bluenc+")");
           }
           else {
-            $("#welcome2").css("opacity",1)
+            $("#welcome2").css("opacity",1);
+            $(".button").css("background-color","rgb("+red2+","+green2+","+blue2+")");
+            $(".button").css("color","rgb("+red1+","+green1+","+blue1+")");
           }
         }
         else {
-          $("#welcome2").css("opacity",0)
+          $("#welcome2").css("opacity",0);
+          $(".button").css("background-color","rgb("+red1+","+green1+","+blue1+")");
+          $(".button").css("color","rgb("+red2+","+green2+","+blue2+")");
         }
       } 
     }
 
-    if (curScroll < 9.3 || curScroll > 10.1) {
+    if (curScroll < 18.6 || curScroll > 20.2) {
       $("#welcome2").css("opacity",0);
+      $("#welcome2").css("visibility","hidden");
+      $(".button").css("background-color","rgb("+red1+","+green1+","+blue1+")");
+      $(".button").css("color","rgb("+red2+","+green2+","+blue2+")");
     }
 
     // -------------------------------------------------------------
 
-    if (curScroll > 10.1 && curScroll < 11.3) {
-      var start = 10.3;
-      var end = 11.1;
-      var opacgetting1 = (curScroll - start)*4;
-      var opacgetting2 = (end - curScroll)*4;
+    if (curScroll > 20.2 && curScroll < 22.6) {
+
+      $("#bye").css("visibility","visible");
+      $("#byeimg").css("visibility","visible");
+
+      var start = 20.6;
+      var end = 22.2;
+      var opacgetting1 = (curScroll - start)*2;
+      var opacgetting2 = (end - curScroll)*2;
 
       if (opacgetting1 < opacgetting2) {
         if (opacgetting1 > 0) {
@@ -567,16 +662,22 @@ $(window).scroll(function(){
       } 
     }
 
-    if (curScroll < 10.3 || curScroll > 11.1) {
+    if (curScroll < 20.6 || curScroll > 22.2) {
       $("#bye").css("opacity",0);
       $("#byeimg").css("opacity",0);
+      $("#bye").css("visibility","hidden");
+      $("#byeimg").css("visibility","hidden");
     }
 
     // -------------------------------------------------------------
 
-    if (curScroll > 11.1) {
-      var start = 11.3;
-      var opacgetting1 = (curScroll - start)*4;
+    if (curScroll > 22.2) {
+      
+      $("#names2").css("visibility","visible");
+      $("#wreath2").css("visibility","visible");
+
+      var start = 22.6;
+      var opacgetting1 = (curScroll - start)*2;
 
         if (opacgetting1 > 0) {
           if (opacgetting1 < 1) {
@@ -594,9 +695,11 @@ $(window).scroll(function(){
         }
     }
 
-    if (curScroll < 11.3) {
+    if (curScroll < 22.6) {
       $("#names2").css("opacity",0);
       $("#wreath2").css("opacity",0);
+      $("#names2").css("visibility","hidden");
+      $("#wreath2").css("visibility","hidden");
     }
   }
 

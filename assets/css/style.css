@@ -159,7 +159,13 @@ z-index: 999999;
   position:fixed;
   left: 10%;
   right: auto;
-  top: 30vh;
+  top: -30vh;
+  height: 40vh;
+  overflow: hidden;
+  border-radius:10vw; 
+  border-style: solid; 
+  border-color: #834257; 
+  border-width: thick;
   margin: auto;
   font-family: Poppins, Open Sans;
   font-size: 100%; 
@@ -189,19 +195,6 @@ z-index: 999999;
   opacity: 1;
 }
 
-#path_web {
-  position: fixed;
-  margin:auto;
-  top: 50vh;
-  left: 52.5vw;
-  z-index: 100;
-  opacity: 0;
-}
-
-#path_mobile {
-  opacity: 0;
-}
-
 #art {
   height: 80vh;
   width:auto;
@@ -225,14 +218,14 @@ z-index: 999999;
   opacity: 0;
 }
 
-#cartoon {
+/* #cartoon {
   font-family: Poppins, sans-serif;
   font-weight: 600;
   font-size: 100%;
   opacity: 0;
   color:#834257;
   text-align: center;
-}
+} */
 
 #reception1 {
   opacity: 0;
@@ -268,12 +261,7 @@ z-index: 999999;
   }
 
   #cartoon {
-    position: fixed;
-    width: 30vw;
-    bottom:19vh;
-    margin:auto;
-    left:15vw;
-    line-height: 100%;
+    top:80vh;
   }
 
   .button {
@@ -404,6 +392,7 @@ z-index: 999999;
 
   #chennai {
     top: 70vh;
+    line-height: 120%;
   }
 
   #coimbatore {
