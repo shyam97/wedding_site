@@ -549,12 +549,12 @@ $(window).scroll(function(){
 
     // ----------------------------------------------------------
 
-    if (curScroll > 16.2 && curScroll < 20.6) {
+    if (curScroll > 16.2 && curScroll < 19.6) {
 
       $("#welcome").css("visibility","visible");
 
       var start = 16.6;
-      var end = 20.2;
+      var end = 19.2;
       var opacgetting1 = (curScroll - start)*2;
       var opacgetting2 = (end - curScroll)*2;
 
@@ -592,12 +592,12 @@ $(window).scroll(function(){
     
     // --------------------------------------------------------------
 
-    if (curScroll > 18.2 && curScroll < 20.6) {
+    if (curScroll > 17.2 && curScroll < 19.6) {
 
       $("#welcome2").css("visibility","visible");
 
-      var start = 18.6;
-      var end = 20.2;
+      var start = 17.6;
+      var end = 19.2;
       var opacgetting1 = (curScroll - start)*2;
       var opacgetting2 = (end - curScroll)*2;
       var red1 = 243;
@@ -668,13 +668,13 @@ $(window).scroll(function(){
 
     // -------------------------------------------------------------
 
-    if (curScroll > 20.2 && curScroll < 22.6) {
+    if (curScroll > 19.2 && curScroll < 21.6) {
 
       $("#bye").css("visibility","visible");
       $("#byeimg").css("visibility","visible");
 
-      var start = 20.6;
-      var end = 22.2;
+      var start = 19.6;
+      var end = 21.2;
       var opacgetting1 = (curScroll - start)*2;
       var opacgetting2 = (end - curScroll)*2;
 
@@ -720,12 +720,12 @@ $(window).scroll(function(){
 
     // -------------------------------------------------------------
 
-    if (curScroll > 22.2) {
+    if (curScroll > 21.2) {
       
       $("#names2").css("visibility","visible");
       $("#wreath2").css("visibility","visible");
 
-      var start = 22.6;
+      var start = 21.6;
       var opacgetting1 = (curScroll - start)*2;
 
         if (opacgetting1 > 0) {
