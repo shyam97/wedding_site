@@ -409,4 +409,12 @@ z-index: 999999;
     top:75vh;
   }
 
+  #wreath2 {
+    opacity:0;
+  }
+
+  #names2 {
+    opacity: 0;
+  }
+
 }
