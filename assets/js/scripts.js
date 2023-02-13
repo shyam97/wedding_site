@@ -16,7 +16,6 @@ $(window).scroll(function(){
 
     if (curScroll < 1.2) {
 
-      $("#scroll").css("visibility","visible");
       $("#wreath1").css("visibility","visible");
       $("#names1").css("visibility","visible");
 
@@ -26,27 +25,22 @@ $(window).scroll(function(){
 
         if (opacgetting2 > 0) {
           if (opacgetting2 < 1) {
-            $("#scroll").css("opacity",opacgetting2);
             $("#wreath1").css("opacity",opacgetting2);
             $("#names1").css("opacity",opacgetting2);
           }
           else {
-            $("#scroll").css("opacity",1);
             $("#wreath1").css("opacity",1);
             $("#names1").css("opacity",1);
           }
         }
         else {
-          $("#scroll").css("opacity",0);
           $("#wreath1").css("opacity",0);
           $("#names1").css("opacity",0);
         }
       } 
       else {
-        $("#scroll").css("opacity",0);
         $("#wreath1").css("opacity",0);
         $("#names1").css("opacity",0);
-        $("#scroll").css("visibility","hidden");
         $("#wreath1").css("visibility","hidden");
         $("#names1").css("visibility","hidden");
         
